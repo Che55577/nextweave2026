@@ -92,28 +92,28 @@ function App() {
               <div className="timeline-item">
                 <div className="timeline-dot" />
                 <div className="timeline-content">
-                  <span className="date" style={{ fontSize: "2.5rem" }}>9/24</span>
+                  <span className="date" style={{ fontSize: "2.5rem" }}>10/3</span>
                   <p style={{ fontSize: "1.5rem" }}>開放報名</p>
                 </div>
               </div>
               <div className="timeline-item">
                 <div className="timeline-dot" />
                 <div className="timeline-content">
-                  <span className="date" style={{ fontSize: "2.5rem" }}>10/31</span>
+                  <span className="date" style={{ fontSize: "2rem" }}>待公布</span>
                   <p style={{ fontSize: "1.5rem" }}>初賽截止</p>
                 </div>
               </div>
               <div className="timeline-item">
                 <div className="timeline-dot" />
                 <div className="timeline-content">
-                  <span className="date" style={{ fontSize: "2.5rem" }}>11/19</span>
+                  <span className="date" style={{ fontSize: "2rem" }}>待公布</span>
                   <p style={{ fontSize: "1.5rem" }}>競賽工作坊</p>
                 </div>
               </div>
               <div className="timeline-item">
                 <div className="timeline-dot" />
                 <div className="timeline-content">
-                  <span className="date" style={{ fontSize: "2.5rem" }}>12/24</span>
+                  <span className="date" style={{ fontSize: "2rem" }}>待公布</span>
                   <p style={{ fontSize: "1.5rem" }}>決賽暨頒獎典禮</p>
                 </div>
               </div>
@@ -142,8 +142,8 @@ function App() {
     <div className="section">
       <h4>一、流程</h4>
       <ul>
-        <li>入選名額：10 隊進入決賽，備取 3 隊</li>
-        <li>公告時間：11/7 前寄信通知並公布名單</li>
+        <li>入選名額：進入決賽團隊名額待公布（請見最新簡章）</li>
+        <li>公告時間：待公布（將寄信通知入選團隊並公布名單）</li>
       </ul>
     </div>
 
@@ -226,7 +226,7 @@ function App() {
 <div className="cards-row">
   <div className="card fade-in">
     <h4>一、工作坊參與</h4>
-    入選決賽團隊須參與 11/19 實體或線上工作坊，獲得：
+    入選決賽團隊須參與實體或線上工作坊（確切時間待公布），獲得：
     <ul>
       <li>實作技術支援（生成式 AI 工具、無程式工具、API 使用說明）</li>
       <li>法學應用諮詢（合規性、使用場景設計）</li>
@@ -237,8 +237,8 @@ function App() {
   <div className="card fade-in">
     <h4>二、決賽提案</h4>
     <ol type="a" className="nested-list">
-      <li>繳件期限：12/17 23:59 前上傳決賽簡報及展示成品</li>
-      <li>現場展示：12/24 進行簡報提案與實際 Prototype 展示，並於決賽當日公布名次</li>
+      <li>繳件期限：待公布（請依官方公告期限上傳決賽簡報及展示成品）</li>
+      <li>現場展示：待公布（進行簡報提案與實際 Prototype 展示，並於決賽當日公布名次）</li>
     </ol>
   </div>
 
@@ -286,23 +286,23 @@ function App() {
               <tbody>
                 <tr>
                   <td>第一名</td>
-                  <td>NT$ 10,000</td>
-                  <td>一組</td>
+                  <td>待公布</td>
+                  <td>待公布</td>
                 </tr>
                 <tr>
                   <td>第二名</td>
-                  <td>NT$ 6,000</td>
-                  <td>二組</td>
+                  <td>待公布</td>
+                  <td>待公布</td>
                 </tr>
                 <tr>
                   <td>第三名</td>
-                  <td>NT$ 4,000</td>
-                  <td>四組</td>
+                  <td>待公布</td>
+                  <td>待公布</td>
                 </tr>
                 <tr>
                   <td>佳作獎</td>
-                  <td>NT$ 1,000</td>
-                  <td>四組</td>
+                  <td>待公布</td>
+                  <td>待公布</td>
                 </tr>
                 <tr>
                   <td>參賽證明</td>
@@ -312,7 +312,7 @@ function App() {
               </tbody>
             </table>
             <div className="total-prize">
-              🎉 總獎金：<span>NT$ 42,000</span>
+              🎉 總獎金：<span>待公布</span>
             </div>
           </div>
         )}
@@ -327,7 +327,7 @@ function App() {
 
   {/* 活動資訊 */}
   <div className="info-box">
-    <p>🕒 <b>時間：</b>2025/11/19 19:00–21:00</p>
+    <p>🕒 <b>時間：</b>2026 年（確切時間待公布）</p>
     <p>📍 <b>地點：</b>東吳大學 城中校區</p>
   </div>
 
@@ -343,34 +343,34 @@ function App() {
     </thead>
     <tbody>
       <tr>
-        <td>18:50–19:00</td>
+        <td>待公布</td>
         <td>開放入場、技術測試</td>
         <td>工作人員協助</td>
       </tr>
       <tr>
-        <td>19:00–19:10</td>
+        <td>待公布</td>
         <td>開場與說明：工作坊目的與決賽要求</td>
         <td>主辦單位代表</td>
       </tr>
       <tr>
-        <td>19:10–20:00</td>
-        <td>PartyRock 簡介與簡單實作</td>
+        <td>待公布</td>
+        <td>生成式 AI / 工具簡介與實作指導</td>
         <td>技術講師</td>
       </tr>
       <tr>
-        <td>20:00–20:50</td>
+        <td>待公布</td>
         <td>法學議題相關講座</td>
         <td>法學專家</td>
       </tr>
       <tr>
-        <td>20:50–21:00</td>
+        <td>待公布</td>
         <td>總結與任務提醒</td>
         <td>主辦單位</td>
       </tr>
     </tbody>
   </table>
 
-  <p className="note">📺 * 當天錄影會公告於當周末的決賽行前說明會</p>
+  <p className="note">📺 * 當天錄影將於會後公告給入選團隊</p>
 </div>
 
         )}
@@ -399,7 +399,7 @@ function App() {
 
       {/* Footer */}
       <footer>
-        <p>© 2025 東吳大學人工智慧應用社 · AI 法創黑客松</p>
+        <p>© 2026 東吳大學人工智慧應用社 · AI 法創黑客松</p>
       </footer>
     </div>
   );
