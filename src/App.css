@@ -68,7 +68,15 @@ body {
   font-weight: bold;
   color: cyan;
   display: block;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
+  font-size: 2rem;
+}
+
+.timeline-content p {
+  font-size: 1.15rem;
+  line-height: 1.4;
+  margin: 0;
+  color: #f1f5f9;
 }
 
 /* 📱 手機 RWD：改成直式時間軸 */
@@ -108,7 +116,7 @@ body {
 
 /* Hero */
 .hero {
-  padding: 100px 20px;   /* 讓 hero 更大 */
+  padding: 80px 20px 40px 20px;   /* 讓 hero 更有層次 */
   animation: fadeIn 0.5s ease-in;
 }
 .title {
@@ -117,23 +125,77 @@ body {
   background: linear-gradient(to right, cyan, #3b82f6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
 }
 .subtitle {
-  margin-top: 30px;
+  margin-top: 15px;
   font-size: 1.5rem;     /* 副標放大 */
   color: #d1d5db;
+}
+
+.hero-img {
+  max-width: 95%;
+  width: 960px;
+  height: auto;
+  border-radius: 20px;
+  margin: 30px auto 40px auto;
+  display: block;
+  box-shadow: 0 10px 40px rgba(0, 230, 255, 0.28);
+  border: 1px solid rgba(0, 255, 255, 0.35);
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 25px;
 }
 
 /* Buttons */
 .btn {
   padding: 16px 28px;    /* 按鈕更大 */
-  margin: 0 12px;
   border-radius: 12px;
   font-size: 1.2rem;     /* 字體放大 */
   font-weight: 600;
   cursor: pointer;
   border: none;
   transition: all 0.3s ease;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.btn.primary {
+  background: linear-gradient(135deg, cyan, #3b82f6);
+  color: #0b1120;
+  font-weight: 700;
+}
+.btn.primary:hover {
+  opacity: 0.92;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 255, 255, 0.4);
+}
+
+.btn.outline {
+  background: transparent;
+  border: 2px solid cyan;
+  color: cyan;
+}
+.btn.outline:hover {
+  background: rgba(0, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.btn.highlight {
+  background: linear-gradient(135deg, #ec4899, #8b5cf6);
+  color: white;
+  font-weight: 700;
+}
+.btn.highlight:hover {
+  opacity: 0.95;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(236, 72, 153, 0.4);
 }
 
 /* Cards */
