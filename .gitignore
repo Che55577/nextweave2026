@@ -1,0 +1,35 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependencies
+node_modules/
+
+# 保留 dist，因為要部署到 GitHub Pages
+# dist-ssr/ 可忽略
+dist-ssr/
+
+# Local env files
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# 保證會提交這些檔案（避免被誤忽略）
+!vite.config.ts
+!package.json
+!package-lock.json
+!tsconfig.json
