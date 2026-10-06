@@ -1,6 +1,10 @@
 import "./App.css";
 import { useState, useEffect } from "react";
 import { PhotoCarousel2025 } from "./components/PhotoCarousel2025";
+import { REGISTRATION_URL, RULES_PDF_URL } from "./data/eventData";
+import tlfLogo from "./assets/image/TLF_Logo1.png";
+import hcLogo from "./assets/image/HC_Logo1.png";
+import aiscuLogo from "./assets/image/AISCU_Logo1.png";
 
 function useIsMobile() {
   const [isMobile, setIsMobile] = useState(
@@ -69,7 +73,7 @@ const RulesSection = () => (
     <p>3. 組隊方式：每隊 2–5 人，可跨校、跨系組隊</p>
     <p>4. 領域限制：不限科系、年級、國籍及專業領域</p>
     <div style={{ marginTop: "30px", textAlign: "center" }}>
-      <a href="./NextWave_AI法創黑客松_簡章.pdf" target="_blank" rel="noopener noreferrer">
+      <a href={RULES_PDF_URL} target="_blank" rel="noopener noreferrer">
         <button className="btn primary">下載官方競賽簡章 (PDF)</button>
       </a>
     </div>
@@ -92,7 +96,7 @@ const Rules1Section = () => (
         <p style={{ marginTop: "15px" }}>
           申請書格式與規範：
           <a
-            href="./NextWave_AI法創黑客松_簡章.pdf"
+            href={RULES_PDF_URL}
             target="_blank"
             rel="noopener noreferrer"
             style={{ marginLeft: "10px", fontSize: "1.4rem", color: "yellow", textDecoration: "none" }}
@@ -365,19 +369,29 @@ const NotificationSection = () => (
 const OrgSection = () => (
   <div id="org" className="card fade-in" style={{ backgroundColor: "rgba(0,0,0,0.4)", padding: "20px" }}>
     <h3 style={{ textAlign: "center", fontSize: "2rem", marginBottom: "40px" }}>合作單位</h3>
-    <div id="org-logos">
+    <div
+      id="org-logos"
+      style={{
+        textAlign: "center",
+        display: "flex",
+        justifyContent: "center",
+        flexWrap: "wrap",
+        gap: "40px",
+        maxWidth: "100%",
+      }}
+    >
       <img
-        src="./image/TLF_Logo1.png"
+        src={tlfLogo}
         alt="台灣法學基金會"
         style={{ maxWidth: "100%", width: "400px", height: "auto", objectFit: "contain" }}
       />
       <img
-        src="./image/HC_Logo1.png"
+        src={hcLogo}
         alt="東吳大學人本AI研究中心"
         style={{ maxWidth: "100%", width: "400px", height: "auto", objectFit: "contain" }}
       />
       <img
-        src="./image/AISCU_Logo1.png"
+        src={aiscuLogo}
         alt="東吳大學人工智慧應用社"
         style={{ maxWidth: "100%", width: "400px", height: "auto", objectFit: "contain" }}
       />
@@ -439,21 +453,21 @@ function App() {
           </p>
           <div className="buttons">
             <a
-              href="https://docs.google.com/forms/d/1pV3JRWR1VF0grXSnMURSD6RUXyooklGbZhrUU8SW9fA/viewform"
+              href={REGISTRATION_URL}
               target="_blank"
               rel="noopener noreferrer"
             >
               <button className="btn primary">立即報名</button>
             </a>
             <a
-              href="./NextWave_AI法創黑客松_簡章.pdf"
+              href={RULES_PDF_URL}
               target="_blank"
               rel="noopener noreferrer"
             >
               <button className="btn primary">查看簡章</button>
             </a>
             <a
-              href="./NextWave_AI法創黑客松_簡章.pdf"
+              href={RULES_PDF_URL}
               download="NextWave_AI法創黑客松_簡章.pdf"
             >
               <button className="btn primary">下載簡章 (PDF)</button>
@@ -549,14 +563,14 @@ function App() {
         <p>提交你的企劃書，挑戰創意與技術的極限。</p>
         <div className="buttons">
           <a
-            href="https://docs.google.com/forms/d/1pV3JRWR1VF0grXSnMURSD6RUXyooklGbZhrUU8SW9fA/viewform"
+            href={REGISTRATION_URL}
             target="_blank"
             rel="noopener noreferrer"
           >
             <button className="btn highlight">前往報名表單</button>
           </a>
           <a
-            href="./NextWave_AI法創黑客松_簡章.pdf"
+            href={RULES_PDF_URL}
             target="_blank"
             rel="noopener noreferrer"
           >
