@@ -1,5 +1,6 @@
 import "./App.css";
 import { useState, useEffect } from "react";
+import { PhotoCarousel2025 } from "./components/PhotoCarousel2025";
 
 function useIsMobile() {
   const [isMobile, setIsMobile] = useState(
@@ -69,7 +70,7 @@ const RulesSection = () => (
     <p>4. 領域限制：不限科系、年級、國籍及專業領域</p>
     <div style={{ marginTop: "30px", textAlign: "center" }}>
       <a href="./NextWave_AI法創黑客松_簡章.pdf" target="_blank" rel="noopener noreferrer">
-        <button className="btn outline">下載官方競賽簡章 (PDF)</button>
+        <button className="btn primary">下載官方競賽簡章 (PDF)</button>
       </a>
     </div>
   </div>
@@ -449,17 +450,20 @@ function App() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <button className="btn outline">查看簡章</button>
+              <button className="btn primary">查看簡章</button>
             </a>
             <a
               href="./NextWave_AI法創黑客松_簡章.pdf"
               download="NextWave_AI法創黑客松_簡章.pdf"
             >
-              <button className="btn highlight">下載簡章 (PDF)</button>
+              <button className="btn primary">下載簡章 (PDF)</button>
             </a>
           </div>
         </section>
       </div>
+
+      {/* 2025 精彩回顧照片輪播 */}
+      <PhotoCarousel2025 />
 
       {/* 手機版頂部固定導覽列 */}
       {isMobile && (
@@ -556,7 +560,7 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <button className="btn outline">下載官方競賽簡章 (PDF)</button>
+            <button className="btn primary">下載官方競賽簡章 (PDF)</button>
           </a>
         </div>
       </section>
