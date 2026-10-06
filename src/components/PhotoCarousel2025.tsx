@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { ChevronLeft, ChevronRight, Maximize2, Sparkles, Pause, Play } from "lucide-react";
+import { ChevronLeft, ChevronRight, Maximize2, Pause, Play } from "lucide-react";
 import { RETROSPECTIVE_PHOTOS } from "../data/eventData";
 import { LightboxModal } from "./LightboxModal";
 
@@ -58,18 +58,16 @@ export const PhotoCarousel2025: React.FC = () => {
   };
 
   return (
-    <section className="retrospective-section" id="retrospective">
-      {/* 區塊標題與介紹 */}
-      <div className="section-header">
-        <div className="section-badge">
-          <Sparkles size={16} className="badge-icon" />
-          <span>HIGHLIGHTS</span>
+    <section className="section-block" id="highlights">
+      <div className="section-container">
+        {/* 章節標籤與標題 */}
+        <div className="section-title-header">
+          <span className="section-overline">05 / HIGHLIGHTS</span>
+          <h2 className="section-heading">2025 精彩回顧</h2>
+          <p className="section-subheading">
+            重溫歷屆現場熱血開發與跨域激盪的精彩瞬間 · 點擊任一照片即可開啟全螢幕檢視
+          </p>
         </div>
-        <h2 className="section-title-retro">2025 精彩回顧</h2>
-        <p className="section-desc-retro">
-          重溫歷屆現場熱血開發與跨域激盪的精彩瞬間 · 點擊任一照片即可開啟全螢幕檢視
-        </p>
-      </div>
 
       {/* 主毛玻璃輪播容器 */}
       <div
@@ -192,15 +190,16 @@ export const PhotoCarousel2025: React.FC = () => {
         ))}
       </div>
 
-      {/* 全螢幕燈箱 Modal */}
-      <LightboxModal
-        isOpen={isLightboxOpen}
-        photos={photos}
-        currentIndex={currentIndex}
-        onClose={() => setIsLightboxOpen(false)}
-        onPrev={prevSlide}
-        onNext={nextSlide}
-      />
+        {/* 全螢幕燈箱 Modal */}
+        <LightboxModal
+          isOpen={isLightboxOpen}
+          photos={photos}
+          currentIndex={currentIndex}
+          onClose={() => setIsLightboxOpen(false)}
+          onPrev={prevSlide}
+          onNext={nextSlide}
+        />
+      </div>
     </section>
   );
 };
