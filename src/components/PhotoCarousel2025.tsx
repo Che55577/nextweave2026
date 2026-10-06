@@ -58,16 +58,11 @@ export const PhotoCarousel2025: React.FC = () => {
   };
 
   return (
-    <section className="section-block" id="highlights">
-      <div className="section-container">
-        {/* 章節標籤與標題 */}
-        <div className="section-title-header">
-          <span className="section-overline">05 / HIGHLIGHTS</span>
-          <h2 className="section-heading">2025 精彩回顧</h2>
-          <p className="section-subheading">
-            重溫歷屆現場熱血開發與跨域激盪的精彩瞬間 · 點擊任一照片即可開啟全螢幕檢視
-          </p>
-        </div>
+    <section className="photo-carousel-wrapper" id="highlights">
+      <h2 className="carousel-title">2025 精彩回顧</h2>
+      <p className="carousel-subtitle">
+        重溫歷屆現場熱血開發與跨域激盪的精彩瞬間 · 點擊任一照片即可開啟全螢幕檢視
+      </p>
 
       {/* 主毛玻璃輪播容器 */}
       <div
@@ -199,7 +194,6 @@ export const PhotoCarousel2025: React.FC = () => {
           onPrev={prevSlide}
           onNext={nextSlide}
         />
-      </div>
     </section>
   );
 };
