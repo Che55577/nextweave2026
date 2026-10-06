@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Users, FileCheck, Layers, Award } from "lucide-react";
+import { Users, FileCheck, Layers, Award, FileDown, ArrowRight, ShieldCheck } from "lucide-react";
+import { RULES_PDF_URL, REGISTRATION_URL, LEGAL_STATEMENTS } from "../data/eventData";
 
 export const RulesSection: React.FC = () => {
   return (
@@ -139,9 +140,62 @@ export const RulesSection: React.FC = () => {
                 <div className="phase-dates">
                   <span>🎤 增能工作坊：2026/12/05 19:00–21:00</span>
                   <span>🏆 決賽暨頒獎：2026/12/27 11:30–20:00</span>
-                </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+        {/* 官方簡章下載專區 Banner */}
+        <div className="rules-download-banner">
+          <div className="download-banner-left">
+            <div className="download-icon-box">
+              <FileDown size={32} className="text-cyan-400" />
+            </div>
+            <div>
+              <h3 className="download-banner-title">下載官方《2026 NextWave AI法創黑客松》競賽簡章</h3>
+              <p className="download-banner-desc">
+                內含完整參賽規定、書面企劃架構規格、決賽 Demo 須知與評分規準說明（PDF 格式）
+              </p>
+            </div>
+          </div>
+          <div className="download-banner-actions">
+            <a
+              href={RULES_PDF_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              download="NextWave_AI法創黑客松_簡章.pdf"
+              className="download-pdf-btn"
+            >
+              <FileDown size={18} />
+              <span>立即下載簡章 (PDF)</span>
+            </a>
+            <a
+              href={REGISTRATION_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="download-register-btn"
+            >
+              <span>前往填寫報名表</span>
+              <ArrowRight size={18} />
+            </a>
+          </div>
+        </div>
+
+        {/* 參賽權益與法律聲明 (活動企畫書規範) */}
+        <div className="legal-statements-wrapper">
+          <div className="legal-header">
+            <ShieldCheck size={22} className="text-purple-400" />
+            <h3 className="legal-title">參賽權益保障與大會聲明</h3>
+          </div>
+          <div className="legal-grid">
+            {LEGAL_STATEMENTS.map((item, idx) => (
+              <div key={idx} className="legal-card">
+                <div className="legal-tag">{item.tag}</div>
+                <h4 className="legal-card-title">{item.title}</h4>
+                <p className="legal-card-text">{item.content}</p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

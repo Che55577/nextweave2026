@@ -1,20 +1,10 @@
 import React from "react";
 import heroImg from "../assets/hero.png";
-import { REGISTRATION_URL, PAST_SITE_URL } from "../data/eventData";
-import { ExternalLink, Sparkles, FileText, ArrowRight, ChevronDown } from "lucide-react";
+import { REGISTRATION_URL, PAST_SITE_URL, RULES_PDF_URL } from "../data/eventData";
+import { ExternalLink, Sparkles, FileDown, ArrowRight, ChevronDown } from "lucide-react";
 import { CountdownTimer } from "./CountdownTimer";
 
 export const Hero: React.FC = () => {
-  const scrollToRules = () => {
-    const el = document.getElementById("rules");
-    if (el) {
-      const navHeight = 90;
-      const elementPosition = el.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - navHeight;
-      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
-    }
-  };
-
   const scrollToAbout = () => {
     const el = document.getElementById("about");
     if (el) {
@@ -68,17 +58,23 @@ export const Hero: React.FC = () => {
             <span>立即線上報名</span>
             <ArrowRight size={20} />
           </a>
-          <button className="hero-btn-outline" onClick={scrollToRules}>
-            <FileText size={18} />
-            <span>查看完整簡章</span>
-          </button>
+          <a
+            href={RULES_PDF_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            download="NextWave_AI法創黑客松_簡章.pdf"
+            className="hero-btn-outline"
+          >
+            <FileDown size={18} />
+            <span>下載競賽簡章 (PDF)</span>
+          </a>
           <a
             href={PAST_SITE_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="hero-btn-ghost"
           >
-            <span>2025 歷屆成果網站</span>
+            <span>2025 歷屆成果</span>
             <ExternalLink size={16} />
           </a>
         </div>

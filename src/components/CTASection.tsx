@@ -1,18 +1,8 @@
 import React from "react";
-import { REGISTRATION_URL } from "../data/eventData";
-import { ArrowRight, Sparkles, FileText } from "lucide-react";
+import { REGISTRATION_URL, RULES_PDF_URL } from "../data/eventData";
+import { ArrowRight, Sparkles, FileDown } from "lucide-react";
 
 export const CTASection: React.FC = () => {
-  const scrollToRules = () => {
-    const el = document.getElementById("rules");
-    if (el) {
-      const navHeight = 90;
-      const elementPosition = el.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - navHeight;
-      window.scrollTo({ top: offsetPosition, behavior: "smooth" });
-    }
-  };
-
   return (
     <section className="cta-final-section">
       <div className="cta-final-container">
@@ -41,10 +31,16 @@ export const CTASection: React.FC = () => {
                 <ArrowRight size={20} />
               </a>
 
-              <button className="cta-secondary-btn" onClick={scrollToRules}>
-                <FileText size={18} />
-                <span>複習競賽辦法</span>
-              </button>
+              <a
+                href={RULES_PDF_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                download="NextWave_AI法創黑客松_簡章.pdf"
+                className="cta-secondary-btn"
+              >
+                <FileDown size={18} />
+                <span>下載官方簡章 (PDF)</span>
+              </a>
             </div>
 
             <p className="cta-micro-note">

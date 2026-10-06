@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ArrowUpRight, Sparkles, ChevronRight, FileText } from "lucide-react";
-import { NAV_LINKS, REGISTRATION_URL } from "../data/eventData";
+import { Menu, X, ArrowUpRight, Sparkles, ChevronRight, FileDown } from "lucide-react";
+import { NAV_LINKS, REGISTRATION_URL, RULES_PDF_URL } from "../data/eventData";
 
 export const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -80,13 +80,16 @@ export const Header: React.FC = () => {
 
           {/* 右側行動按鈕 */}
           <div className="nav-actions-desktop">
-            <button
+            <a
+              href={RULES_PDF_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              download="NextWave_AI法創黑客松_簡章.pdf"
               className="nav-btn-outline"
-              onClick={() => scrollToSection("rules")}
             >
-              <FileText size={15} />
-              <span>簡章規範</span>
-            </button>
+              <FileDown size={15} />
+              <span>下載簡章</span>
+            </a>
             <a
               href={REGISTRATION_URL}
               target="_blank"
@@ -157,6 +160,31 @@ export const Header: React.FC = () => {
               </div>
 
               <div className="mobile-menu-footer">
+                <a
+                  href={RULES_PDF_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download="NextWave_AI法創黑客松_簡章.pdf"
+                  className="mobile-cta-btn"
+                  onClick={() => setMobileMenuOpen(false)}
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: "8px",
+                    background: "rgba(255, 255, 255, 0.08)",
+                    border: "1px solid rgba(255, 255, 255, 0.15)",
+                    color: "#f8fafc",
+                    padding: "12px 18px",
+                    borderRadius: "12px",
+                    fontWeight: 600,
+                    textDecoration: "none",
+                    marginBottom: "8px",
+                  }}
+                >
+                  <FileDown size={18} />
+                  <span>下載官方簡章 (PDF)</span>
+                </a>
                 <a
                   href={REGISTRATION_URL}
                   target="_blank"

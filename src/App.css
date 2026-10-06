@@ -1089,6 +1089,189 @@ body {
   border-top: 1px solid var(--border-glass);
 }
 
+/* 官方簡章下載專區 Banner */
+.rules-download-banner {
+  margin-top: 40px;
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.12) 0%, rgba(30, 58, 138, 0.2) 100%);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  border-radius: 24px;
+  padding: 36px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  box-shadow: 0 16px 40px -10px rgba(6, 182, 212, 0.15);
+  backdrop-filter: blur(16px);
+}
+
+.download-banner-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex: 1;
+}
+
+.download-icon-box {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  background: rgba(6, 182, 212, 0.15);
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.2);
+}
+
+.download-banner-title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
+}
+
+.download-banner-desc {
+  font-size: 1.02rem;
+  color: var(--text-sub);
+  line-height: 1.6;
+}
+
+.download-banner-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.download-pdf-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 26px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #00f0ff 0%, #0284c7 100%);
+  color: #030712;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 8px 24px -6px rgba(0, 240, 255, 0.4);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.download-pdf-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px -4px rgba(0, 240, 255, 0.6);
+  filter: brightness(1.05);
+}
+
+.download-register-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 22px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #f1f5f9;
+  font-size: 0.98rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.download-register-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.35);
+  transform: translateY(-2px);
+}
+
+/* 法律聲明與權益保障卡片 */
+.legal-statements-wrapper {
+  margin-top: 48px;
+  padding-top: 36px;
+  border-top: 1px solid var(--border-glass);
+}
+
+.legal-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.legal-title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #e2e8f0;
+  letter-spacing: -0.01em;
+}
+
+.legal-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.legal-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: 18px;
+  padding: 24px;
+  transition: all 0.25s ease;
+}
+
+.legal-card:hover {
+  border-color: rgba(168, 85, 247, 0.3);
+  transform: translateY(-2px);
+}
+
+.legal-tag {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: #c084fc;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 8px;
+}
+
+.legal-card-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.legal-card-text {
+  font-size: 0.96rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .rules-download-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 28px 24px;
+  }
+  .download-banner-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .download-banner-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+  .download-pdf-btn,
+  .download-register-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 /* ==========================================================================
    05. Rubrics 評分標準動態進度條
    ========================================================================== */

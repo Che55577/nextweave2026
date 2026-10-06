@@ -68,9 +68,10 @@ export const WorkshopSection: React.FC = () => {
               <div className="ws-bonus-banner">
                 <Sparkles size={20} className="text-yellow-400 flex-shrink-0 animate-pulse" />
                 <div>
-                  <strong>🌟 決賽加分機制：</strong>
+                  <strong>🌟 決賽加分機制與簽到規定：</strong>
                   <span>
                     晉級決賽之團隊參與本次工作坊，將獲得決賽原型實作加分！現場安排技術講師與法學顧問一對一答疑。
+                    <b>（※ 每隊須至少派出一名代表簽到，未到者視同棄權；工作坊錄影將提供後續複習）</b>
                   </span>
                 </div>
               </div>

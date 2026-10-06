@@ -3,6 +3,12 @@ export const REGISTRATION_URL =
 
 export const PAST_SITE_URL = "https://aiscuclub.github.io/NEXTWAVE/";
 
+const BASE = import.meta.env.BASE_URL.endsWith("/")
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+
+export const RULES_PDF_URL = `${BASE}NextWave_AI法創黑客松_簡章.pdf`;
+
 // 初賽繳件截止倒數目標時間 (2026/11/30 23:59:59)
 export const COUNTDOWN_TARGET_DATE = "2026-11-30T23:59:59+08:00";
 
@@ -37,19 +43,19 @@ export const STATS_DATA: StatItem[] = [
   {
     value: "NT$ 50,000",
     label: "總獎金池",
-    detail: "第一名高達兩萬元，人人有機會",
+    detail: "第一名高達兩萬元，入圍全員官方證書",
     accent: "from-amber-400 to-yellow-500",
   },
   {
     value: "2–5 人",
     label: "自由組隊規模",
-    detail: "不限科系學校，鼓勵法學×科技跨域",
+    detail: "全國大專院校，不限科系跨校跨域",
     accent: "from-cyan-400 to-blue-500",
   },
   {
     value: "10/15 – 11/30",
     label: "初賽企劃繳件",
-    detail: "線上報名填表，書面企劃審查",
+    detail: "線上報名填表，書面審查免考試",
     accent: "from-purple-400 to-indigo-500",
   },
   {
@@ -101,10 +107,6 @@ export const THEMES_DATA: ThemeItem[] = [
 ];
 
 // 2025 精彩回顧照片清單 (共 20 張優化代表照片)
-const BASE = import.meta.env.BASE_URL.endsWith("/")
-  ? import.meta.env.BASE_URL
-  : `${import.meta.env.BASE_URL}/`;
-
 export interface RetrospectivePhoto {
   id: number;
   filename: string;
@@ -237,9 +239,9 @@ export const PRIZES_DATA: PrizeTier[] = [
     id: "merit",
     rank: "佳作",
     title: "佳作獎",
-    amount: "NT$ 2,000",
+    amount: "NT$ 3,000",
     quota: "3 組",
-    perks: ["大會獎金 NT$ 2,000", "入選團隊佳作獎狀每人乙紙"],
+    perks: ["大會獎金 NT$ 3,000", "入選團隊佳作獎狀每人乙紙"],
     accent: "cyan",
   },
   {
@@ -247,8 +249,8 @@ export const PRIZES_DATA: PrizeTier[] = [
     rank: "特別",
     title: "最佳簡報獎",
     amount: "NT$ 2,000",
-    quota: "2 組",
-    perks: ["大會獎金 NT$ 2,000", "最佳台風與展示評審特別表揚"],
+    quota: "3 組",
+    perks: ["大會獎金 NT$ 2,000", "最佳台風與現場展示評審特別表揚"],
     accent: "purple",
   },
 ];
@@ -398,3 +400,32 @@ export const FINALS_FLOW = [
   { time: "17:40–18:00", event: "隆重頒獎典禮與獲獎感言分享" },
   { time: "18:00–20:00", event: "交流茶會、團隊大合照與場地復原" },
 ];
+
+// 法律聲明與權益保障規範
+export interface LegalStatement {
+  title: string;
+  tag: string;
+  content: string;
+}
+
+export const LEGAL_STATEMENTS: LegalStatement[] = [
+  {
+    title: "智慧財產權歸屬",
+    tag: "Intellectual Property",
+    content:
+      "參賽作品之智慧財產權與著作權完全歸參賽隊伍所有。主辦單位僅享有非營利展示、推廣成果及學術紀錄之權利。",
+  },
+  {
+    title: "個人資料保護聲明",
+    tag: "Privacy & Data",
+    content:
+      "參賽者同意主辦單位蒐集、處理及利用個人資料，僅供本次競賽相關作業、保險及活動聯繫使用，依法妥善保管。",
+  },
+  {
+    title: "肖像權與影音紀錄",
+    tag: "Portrait Rights",
+    content:
+      "參與決賽之隊伍同意主辦單位拍攝活動過程，並同意將影像用於賽事公開宣傳、成果紀實與教育推廣用途。",
+  },
+];
+

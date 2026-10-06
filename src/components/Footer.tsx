@@ -1,6 +1,6 @@
 import React from "react";
-import { ArrowUp, ExternalLink } from "lucide-react";
-import { REGISTRATION_URL, PAST_SITE_URL } from "../data/eventData";
+import { ArrowUp, ExternalLink, FileDown } from "lucide-react";
+import { REGISTRATION_URL, PAST_SITE_URL, RULES_PDF_URL } from "../data/eventData";
 
 export const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -59,6 +59,17 @@ export const Footer: React.FC = () => {
           <div className="footer-links-col">
             <h4 className="footer-col-title">外部官方連結</h4>
             <ul className="footer-ext-list">
+              <li>
+                <a
+                  href={RULES_PDF_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  download="NextWave_AI法創黑客松_簡章.pdf"
+                >
+                  <span>官方競賽簡章 (PDF)</span>
+                  <FileDown size={14} />
+                </a>
+              </li>
               <li>
                 <a href={REGISTRATION_URL} target="_blank" rel="noopener noreferrer">
                   <span>線上報名表單</span>
