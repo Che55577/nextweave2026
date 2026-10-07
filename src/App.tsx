@@ -242,49 +242,11 @@ const WorkshopSection = () => (
 
     <div className="info-box">
       <p>🕒 <b>時間：</b>2026/12/05 (五) 19:00–21:00</p>
-      <p>📍 <b>地點：</b>東吳大學 城中校區（遊藝廣場 / Google Meet 線上同步）</p>
+      <p>📍 <b>地點：</b>待定</p>
       <p>⚠️ <b>注意：</b>每隊須至少派員一人完成簽到，未到視同棄權</p>
     </div>
 
-    <h4 className="section-title">📌 活動流程</h4>
-    <table className="flow-table">
-      <thead>
-        <tr>
-          <th>時間</th>
-          <th>活動內容</th>
-          <th>負責單位</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>18:50–19:00</td>
-          <td>開放入場、技術測試</td>
-          <td>工作人員協助</td>
-        </tr>
-        <tr>
-          <td>19:00–19:10</td>
-          <td>開場與說明：工作坊目的與決賽要求</td>
-          <td>主辦單位代表</td>
-        </tr>
-        <tr>
-          <td>19:10–20:00</td>
-          <td>生成式 AI 與開發工具實作講座</td>
-          <td>技術講師</td>
-        </tr>
-        <tr>
-          <td>20:00–20:50</td>
-          <td>法學議題相關講座與跨域指導</td>
-          <td>法學專家</td>
-        </tr>
-        <tr>
-          <td>20:50–21:00</td>
-          <td>總結與任務提醒</td>
-          <td>主辦單位</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p className="note">📺 * 當天錄影會公告於決賽行前說明，供團隊複習</p>
+    <p className="note" style={{ marginTop: "20px" }}>📺 * 當天錄影會公告於決賽行前說明，供團隊複習</p>
   </div>
 );
 
