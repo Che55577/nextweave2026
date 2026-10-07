@@ -81,7 +81,7 @@ const RulesSection = () => (
         <button className="btn primary">查看競賽簡章</button>
       </a>
       <a href={PROPOSAL_HTML_URL} target="_blank" rel="noopener noreferrer">
-        <button className="btn primary">線上提案書規範（點擊開啟）</button>
+        <button className="btn primary">線上提案書規範</button>
       </a>
     </div>
   </div>
@@ -484,7 +484,7 @@ function App() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <button className="btn primary">線上提案書規範（點擊開啟）</button>
+              <button className="btn primary">線上提案書規範</button>
             </a>
           </div>
         </section>
@@ -588,7 +588,7 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <button className="btn primary">線上提案書規範（點擊開啟）</button>
+            <button className="btn primary">線上提案書規範</button>
           </a>
         </div>
       </section>
