@@ -9,6 +9,8 @@ const BASE = import.meta.env.BASE_URL.endsWith("/")
   : `${import.meta.env.BASE_URL}/`;
 
 export const RULES_PDF_URL = `${BASE}NextWave_AI法創黑客松_簡章.pdf`;
+export const PROPOSAL_HTML_URL = `${BASE}proposal.html`;
+export const PROPOSAL_DOCX_URL = `${BASE}2026年NextWave競賽提案書.docx`;
 
 // 2025 精彩回顧照片清單 (共 20 張優化代表照片)
 export interface RetrospectivePhoto {

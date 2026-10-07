@@ -1,7 +1,12 @@
 import "./App.css";
 import { useState, useEffect } from "react";
 import { PhotoCarousel2025 } from "./components/PhotoCarousel2025";
-import { REGISTRATION_URL, RULES_PDF_URL } from "./data/eventData";
+import {
+  REGISTRATION_URL,
+  RULES_PDF_URL,
+  PROPOSAL_HTML_URL,
+  PROPOSAL_DOCX_URL,
+} from "./data/eventData";
 import tlfLogo from "./assets/image/TLF_Logo1.png";
 import hcLogo from "./assets/image/HC_Logo1.png";
 import aiscuLogo from "./assets/image/AISCU_Logo1.png";
@@ -93,15 +98,37 @@ const Rules1Section = () => (
           <li>主辦收到報名資料後即會回信通知</li>
           <li>決賽公告時間：12/2 前寄信通知並公布名單</li>
         </ul>
-        <p style={{ marginTop: "15px" }}>
+        <p style={{ marginTop: "15px", fontSize: "1.2rem" }}>
           申請書格式與規範：
           <a
-            href={RULES_PDF_URL}
+            href={PROPOSAL_HTML_URL}
             target="_blank"
             rel="noopener noreferrer"
-            style={{ marginLeft: "10px", fontSize: "1.4rem", color: "yellow", textDecoration: "none" }}
+            style={{
+              marginLeft: "10px",
+              fontSize: "1.4rem",
+              color: "yellow",
+              textDecoration: "underline",
+              fontWeight: "bold",
+            }}
           >
             點擊我開啟文件
+          </a>
+          <a
+            href={PROPOSAL_DOCX_URL}
+            download="2026年NextWave競賽提案書.docx"
+            style={{
+              marginLeft: "12px",
+              fontSize: "1rem",
+              color: "#38bdf8",
+              textDecoration: "none",
+              border: "1px solid #38bdf8",
+              padding: "4px 10px",
+              borderRadius: "6px",
+              display: "inline-block",
+            }}
+          >
+            下載 Word 檔範本
           </a>
         </p>
       </div>

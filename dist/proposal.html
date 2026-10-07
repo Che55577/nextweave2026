@@ -1,0 +1,656 @@
+<!doctype html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2026年「NextWave：AI法創黑客松」提案書（申請書格式與規範）</title>
+    <link rel="icon" type="image/png" href="./favicon.png" />
+    <style>
+      :root {
+        --primary: #0284c7;
+        --primary-hover: #0369a1;
+        --bg-gray: #f1f5f9;
+        --sheet-bg: #ffffff;
+        --text-color: #0f172a;
+        --border-color: #000000;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "DFKai-SB", "BiauKai", "標楷體", "Noto Serif TC", serif;
+        background-color: var(--bg-gray);
+        color: var(--text-color);
+        line-height: 1.6;
+      }
+
+      /* 頂部功能列 (像 Google 文件 / Word Online) */
+      .top-navbar {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: #0f172a;
+        color: #fff;
+        padding: 12px 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      }
+
+      .navbar-title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: #38bdf8;
+      }
+
+      .navbar-actions {
+        display: flex;
+        gap: 12px;
+      }
+
+      .nav-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-size: 0.95rem;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+        border: none;
+        transition: all 0.2s ease;
+      }
+
+      .btn-download {
+        background: linear-gradient(135deg, #06b6d4, #3b82f6);
+        color: #fff;
+      }
+
+      .btn-download:hover {
+        opacity: 0.9;
+        transform: translateY(-1px);
+      }
+
+      .btn-print {
+        background: #334155;
+        color: #fff;
+      }
+
+      .btn-print:hover {
+        background: #475569;
+      }
+
+      .btn-back {
+        background: transparent;
+        color: #94a3b8;
+        border: 1px solid #475569;
+      }
+
+      .btn-back:hover {
+        color: #fff;
+        border-color: #cbd5e1;
+      }
+
+      /* 文件閱讀器容器 */
+      .document-container {
+        max-width: 900px;
+        margin: 30px auto 60px auto;
+        padding: 0 16px;
+      }
+
+      /* 單頁仿 A4 白底文件 */
+      .document-sheet {
+        background: var(--sheet-bg);
+        padding: 60px 70px;
+        border-radius: 4px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        border: 1px solid #e2e8f0;
+        margin-bottom: 30px;
+        font-size: 14pt;
+        line-height: 20pt;
+      }
+
+      h1.doc-title {
+        text-align: center;
+        font-size: 26pt;
+        font-weight: bold;
+        line-height: 1.4;
+        margin-bottom: 20px;
+        letter-spacing: 2px;
+      }
+
+      h2.section-title {
+        font-size: 18pt;
+        font-weight: bold;
+        margin: 25px 0 15px 0;
+        padding-bottom: 4px;
+        border-bottom: 1.5px solid #000;
+      }
+
+      h3.subsection-title {
+        font-size: 15pt;
+        font-weight: bold;
+        margin: 15px 0 10px 0;
+      }
+
+      .field-line {
+        margin: 10px 0;
+        font-size: 14pt;
+      }
+
+      .underline-fill {
+        border-bottom: 1px solid #000;
+        display: inline-block;
+        min-width: 260px;
+        padding: 0 8px;
+      }
+
+      .catalog-box {
+        border: 1px solid #000;
+        padding: 16px 24px;
+        margin: 25px 0;
+        background: #fafafa;
+      }
+
+      .catalog-box h3 {
+        text-align: center;
+        margin-bottom: 12px;
+        font-size: 16pt;
+      }
+
+      .catalog-list {
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px 20px;
+      }
+
+      .notice-box {
+        background: #fffbeb;
+        border-left: 5px solid #f59e0b;
+        padding: 16px 20px;
+        margin: 25px 0;
+        border-radius: 0 6px 6px 0;
+        font-size: 13pt;
+        line-height: 1.7;
+      }
+
+      .notice-box strong {
+        color: #b45309;
+        font-size: 14pt;
+      }
+
+      /* 表格樣式 */
+      table.doc-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 16px 0;
+        font-size: 13pt;
+      }
+
+      table.doc-table th,
+      table.doc-table td {
+        border: 1px solid var(--border-color);
+        padding: 10px 14px;
+        text-align: left;
+        vertical-align: middle;
+      }
+
+      table.doc-table th {
+        background-color: #f8fafc;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .col-header {
+        background-color: #f8fafc;
+        font-weight: bold;
+        width: 28%;
+        text-align: center;
+      }
+
+      .photo-box {
+        min-height: 140px;
+        border: 1px dashed #64748b;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #94a3b8;
+        font-size: 12pt;
+        background: #fafafa;
+      }
+
+      .table-note {
+        font-size: 11pt;
+        color: #475569;
+        margin-top: 6px;
+        margin-bottom: 15px;
+      }
+
+      .agreement-clause {
+        margin: 14px 0;
+        text-align: justify;
+        line-height: 1.8;
+        text-indent: 2em;
+      }
+
+      .sign-section {
+        margin-top: 40px;
+        text-align: right;
+      }
+
+      .sign-line {
+        margin: 15px 0;
+        text-align: left;
+      }
+
+      .date-line {
+        margin-top: 30px;
+        text-align: right;
+        font-size: 14pt;
+      }
+
+      /* 列印樣式優化 */
+      @media print {
+        .top-navbar {
+          display: none !important;
+        }
+
+        body {
+          background: #fff;
+          color: #000;
+        }
+
+        .document-container {
+          max-width: 100%;
+          margin: 0;
+          padding: 0;
+        }
+
+        .document-sheet {
+          box-shadow: none;
+          border: none;
+          padding: 0;
+          margin-bottom: 0;
+          page-break-after: always;
+        }
+
+        .notice-box {
+          background: #fff;
+          border-left: 3px solid #000;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .document-sheet {
+          padding: 30px 20px;
+          font-size: 12pt;
+          line-height: 18pt;
+        }
+
+        h1.doc-title {
+          font-size: 20pt;
+        }
+
+        .catalog-list {
+          grid-template-columns: 1fr;
+        }
+
+        .top-navbar {
+          flex-direction: column;
+          gap: 12px;
+          align-items: flex-start;
+          padding: 12px 16px;
+        }
+
+        .navbar-actions {
+          width: 100%;
+          justify-content: space-between;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 頂部功能導覽列 -->
+    <header class="top-navbar">
+      <div class="navbar-title">
+        <span>📄</span>
+        <span>2026年「NextWave：AI法創黑客松」提案書規範</span>
+      </div>
+      <div class="navbar-actions">
+        <a
+          href="./2026年NextWave競賽提案書.docx"
+          download="2026年NextWave競賽提案書.docx"
+          class="nav-btn btn-download"
+          title="下載 Word 檔範本以供填寫"
+        >
+          ⬇️ 下載 Word 檔範本 (.docx)
+        </a>
+        <button class="nav-btn btn-print" onclick="window.print()" title="列印或另存為 PDF">
+          🖨️ 列印 / 另存 PDF
+        </button>
+        <a href="./" class="nav-btn btn-back">
+          🔙 返回活動官網
+        </a>
+      </div>
+    </header>
+
+    <!-- 主文件區塊 -->
+    <main class="document-container">
+      <article class="document-sheet">
+        <!-- 封面 -->
+        <h1 class="doc-title">
+          2026年<br />
+          「NextWave：AI法創黑客松」<br />
+          提案書
+        </h1>
+
+        <div style="margin: 30px 0;">
+          <div class="field-line">
+            團隊總人數：<span class="underline-fill" style="min-width: 100px;"></span> 人
+          </div>
+          <div class="field-line">
+            申請人 (學生代表) 姓名：<span class="underline-fill"></span>
+          </div>
+          <div class="field-line">
+            申請人之學校：<span class="underline-fill"></span>
+          </div>
+          <div class="field-line">
+            申請人之系所：<span class="underline-fill"></span>
+          </div>
+          <div class="field-line">
+            作品名稱：<span class="underline-fill" style="min-width: 380px;"></span>
+          </div>
+          <div class="field-line">
+            隊伍名稱：<span class="underline-fill" style="min-width: 380px;"></span>
+          </div>
+        </div>
+
+        <div class="catalog-box">
+          <h3>目 &nbsp; &nbsp; 錄</h3>
+          <ul class="catalog-list">
+            <li>□ 一、申請表</li>
+            <li>□ 二、作品說明書</li>
+            <li>□ 三、參賽同意書</li>
+            <li>□ 四、獎金領款人及成員授權同意書</li>
+          </ul>
+        </div>
+
+        <div class="notice-box">
+          <strong>【注意事項】</strong>
+          <ol style="margin-left: 20px; margin-top: 6px;">
+            <li>內文使用標楷體，字型大小採用 14，固定行高 20pt。圖片、表格及方程式，可置於文中或文末。</li>
+            <li>資料送出前，請仔細檢查上列文件是否齊全。</li>
+            <li>
+              提案書電子檔 (WORD 及 PDF 雙格式) 請上傳至雲端硬碟，並將下載連結 Email 至大會電子信箱：<br />
+              <strong>郵件主旨：NextWave：AI法創黑客松_隊名_提案書繳交</strong><br />
+              <strong>東吳人工智慧應用社：ai.scu.club@gmail.com</strong>
+            </li>
+          </ol>
+        </div>
+
+        <!-- 一、申請表 -->
+        <h2 class="section-title">一、申請表</h2>
+
+        <h3 class="subsection-title">1. 基本資料 (學生)</h3>
+        <table class="doc-table">
+          <tbody>
+            <tr>
+              <td class="col-header">中文姓名</td>
+              <td style="width: 32%;">(學生代表)</td>
+              <td style="width: 18%; text-align: center; font-weight: bold;">性別</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="col-header">出生年月日</td>
+              <td>YYYY/MM/DD</td>
+              <td style="text-align: center; font-weight: bold;">行動電話</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="col-header">永久 E-mail</td>
+              <td colspan="3"></td>
+            </tr>
+            <tr>
+              <td class="col-header">聯絡地址</td>
+              <td colspan="3"></td>
+            </tr>
+            <tr>
+              <td class="col-header">學校</td>
+              <td colspan="3"></td>
+            </tr>
+            <tr>
+              <td class="col-header">系所</td>
+              <td colspan="3"></td>
+            </tr>
+            <tr>
+              <td class="col-header">年級</td>
+              <td colspan="3"></td>
+            </tr>
+            <tr>
+              <td class="col-header">學號</td>
+              <td colspan="3"></td>
+            </tr>
+            <tr>
+              <td class="col-header">專長說明</td>
+              <td colspan="3"></td>
+            </tr>
+            <tr>
+              <td class="col-header">中文姓名</td>
+              <td>(學生2)</td>
+              <td style="text-align: center; font-weight: bold;">性別</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="col-header">出生年月日</td>
+              <td>YYYY/MM/DD</td>
+              <td style="text-align: center; font-weight: bold;">行動電話</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="col-header">永久 E-mail</td>
+              <td colspan="3"></td>
+            </tr>
+            <tr>
+              <td class="col-header">聯絡地址</td>
+              <td colspan="3"></td>
+            </tr>
+            <tr>
+              <td class="col-header">學校</td>
+              <td colspan="3"></td>
+            </tr>
+            <tr>
+              <td class="col-header">系所</td>
+              <td colspan="3"></td>
+            </tr>
+            <tr>
+              <td class="col-header">年級</td>
+              <td colspan="3"></td>
+            </tr>
+            <tr>
+              <td class="col-header">學號</td>
+              <td colspan="3"></td>
+            </tr>
+            <tr>
+              <td class="col-header">專長說明</td>
+              <td colspan="3"></td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="table-note">註：學生成員人數至少 2 人，至多 5 人為限，不敷使用者請自行加頁填寫。</p>
+
+        <h3 class="subsection-title">3. 學生證 (彩色影像檔)</h3>
+        <table class="doc-table">
+          <thead>
+            <tr>
+              <th style="width: 50%;">學生代表 (正面)</th>
+              <th style="width: 50%;">學生代表 (反面)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><div class="photo-box">黏貼處 / 插入影像</div></td>
+              <td><div class="photo-box">黏貼處 / 插入影像</div></td>
+            </tr>
+            <tr>
+              <th style="text-align: center;">學生 2 (正面)</th>
+              <th style="text-align: center;">學生 2 (反面)</th>
+            </tr>
+            <tr>
+              <td><div class="photo-box">黏貼處 / 插入影像</div></td>
+              <td><div class="photo-box">黏貼處 / 插入影像</div></td>
+            </tr>
+            <tr>
+              <th style="text-align: center;">學生 3 (正面)</th>
+              <th style="text-align: center;">學生 3 (反面)</th>
+            </tr>
+            <tr>
+              <td><div class="photo-box">黏貼處 / 插入影像</div></td>
+              <td><div class="photo-box">黏貼處 / 插入影像</div></td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="table-note">註：已填寫申請表之學生基本資料者，應提供學生證 (影像檔) 或當學期在學證明，不敷使用者自行加頁使用。</p>
+
+        <h3 class="subsection-title">4. 作品基本資料</h3>
+        <table class="doc-table">
+          <tbody>
+            <tr>
+              <td class="col-header">作品名稱</td>
+              <td></td>
+            </tr>
+            <tr>
+              <td class="col-header">議題概述</td>
+              <td style="color: #64748b;">(限 200 字內)</td>
+            </tr>
+            <tr>
+              <td class="col-header">作品概述</td>
+              <td style="color: #64748b;">(限 200 字內)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- 二、作品說明書 -->
+        <h2 class="section-title">二、作品說明書</h2>
+        <table class="doc-table">
+          <tbody>
+            <tr>
+              <td class="col-header">團隊簡介</td>
+              <td>(成員名單與專業背景與負責項目)</td>
+            </tr>
+            <tr>
+              <td class="col-header">構想動機及分析</td>
+              <td>(請說明背景與問題分析、製作目的、設計動機與分析等)</td>
+            </tr>
+            <tr>
+              <td class="col-header">問題定義與<br />背景分析</td>
+              <td>(法律議題描述、AI 技術關聯性與挑戰分析)</td>
+            </tr>
+            <tr>
+              <td class="col-header">跨領域合作<br />分工情形</td>
+              <td>(請說明隊員間完成此作品之團隊合作方式。如跨領域合作、分工合作情形、主題之選取、實作前之評估、實作進行中問題之解決、協調整合…等)</td>
+            </tr>
+            <tr>
+              <td class="col-header">AI × 法學<br />解決構想書<br />(1-3 頁)</td>
+              <td>(需含有創新亮點說明、使用之 AI 技術、法律應用場景和預期效益評估。技術架構圖或概念示意圖 (選填))</td>
+            </tr>
+            <tr>
+              <td class="col-header">其餘補充資料<br />(選填)</td>
+              <td>其他想補充的部分，或是未闡述於以上之作品特色。</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="table-note">註：表格空間不足時，請自行加頁說明，作品說明書內容至少 2 頁，以 6 頁為限。</p>
+
+        <!-- 三、參賽同意書 -->
+        <h2 class="section-title">三、「2026 NextWave：AI法創黑客松」參賽同意書</h2>
+        <p style="margin: 15px 0;">
+          本團隊 <span class="underline-fill" style="min-width: 250px;"></span> 已詳閱「NextWave：AI法創黑客松競賽辦法」，並同意如下：
+        </p>
+
+        <p class="agreement-clause">
+          1. 參賽作品均為立書人原創，絕無抄襲或侵害他人著作之情事。倘因立書人抄襲或侵權，致使主辦單位需對第三人負損害賠償責任或發生其他損失，立書人願承擔一切賠償及相關法律責任。
+        </p>
+        <p class="agreement-clause">
+          2. 參賽作品為首次投稿，未曾投稿於其他競賽或活動。經查若有一稿多投，主辦單位得取消參賽資格；如已獲獎，則追回其所有獎項。
+        </p>
+        <p class="agreement-clause">
+          3. 主辦單位為執行參賽者管理、報名、身分確認、活動聯繫及辦理競賽相關行政作業，得蒐集、處理及利用立書人之個人資料，包含但不限於姓名、性別、身分證 (居留證) 號、出生日期、聯絡電話、通訊地址、電子郵件、學歷及其他可識別身份之文件等。
+        </p>
+        <p class="agreement-clause">
+          4. 立書人就因本競賽提供之個人資料，有權依法向主辦單位請求查閱、製發複本、更正、補充、停止蒐集或處理利用及要求刪除。惟依法須保存者不在此限。如因此影響參賽、獲獎或獎項領取權益，應自行承擔相關責任。
+        </p>
+        <p class="agreement-clause">
+          5. 立書人如有違反本競賽規定之情事，主辦單位有權取消參賽及得獎資格，立書人同意繳回獲得之獎金及獎狀。
+        </p>
+
+        <div class="sign-section">
+          <p style="text-align: left; margin: 20px 0;">此 &nbsp; 致</p>
+          <p style="text-align: left; font-weight: bold; margin-bottom: 20px;">
+            主辦單位：東吳人本AI研究中心、台灣法學基金會、東吳人工智慧應用社
+          </p>
+          <div class="sign-line">
+            立書人簽章：<span style="font-size: 11pt; color: #475569;">(團隊所有成員均需親筆簽名)</span><br /><br />
+            <span class="underline-fill" style="width: 100%; min-height: 40px; display: block;"></span>
+          </div>
+          <div class="date-line">
+            中華民國　　　年　　月　　日
+          </div>
+        </div>
+
+        <!-- 四、獎金領款人及成員授權同意書 -->
+        <h2 class="section-title" style="margin-top: 50px;">四、獎金領款人及成員授權同意書</h2>
+        <div class="field-line" style="margin-bottom: 15px;">
+          隊伍名稱：<span class="underline-fill" style="min-width: 350px;"></span>
+        </div>
+
+        <table class="doc-table">
+          <thead>
+            <tr>
+              <th style="width: 25%;">獎金領款人</th>
+              <th style="width: 25%;">身分證字號</th>
+              <th style="width: 25%;">連絡電話</th>
+              <th style="width: 25%;">戶籍地址 (含鄰、里)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="min-height: 45px;">&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="agreement-clause" style="margin-top: 20px;">
+          本團隊授權參賽成員 <span class="underline-fill" style="min-width: 150px;"></span> 為領款人，領取競賽獎金；若有任何爭執疑問之處，主辦單位不涉入處理。
+        </p>
+
+        <div class="sign-section">
+          <p style="text-align: left; margin: 20px 0;">此 &nbsp; 致</p>
+          <p style="text-align: left; font-weight: bold; margin-bottom: 20px;">
+            主辦單位：東吳人本AI研究中心、台灣法學基金會、東吳人工智慧應用社
+          </p>
+          <div class="sign-line">
+            立書人簽章：<span style="font-size: 11pt; color: #475569;">(團隊所有成員均需親筆簽名)</span><br /><br />
+            <span class="underline-fill" style="width: 100%; min-height: 40px; display: block;"></span>
+          </div>
+          <div class="date-line">
+            中華民國　　　年　　月　　日
+          </div>
+        </div>
+      </article>
+    </main>
+  </body>
+</html>
