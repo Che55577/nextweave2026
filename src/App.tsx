@@ -5,7 +5,6 @@ import {
   REGISTRATION_URL,
   RULES_PDF_URL,
   PROPOSAL_HTML_URL,
-  PROPOSAL_DOCX_URL,
 } from "./data/eventData";
 import tlfLogo from "./assets/image/TLF_Logo1.png";
 import hcLogo from "./assets/image/HC_Logo1.png";
@@ -77,9 +76,12 @@ const RulesSection = () => (
     <p>2. 年齡限制：需滿 18 歲以上</p>
     <p>3. 組隊方式：每隊 2–5 人，可跨校、跨系組隊</p>
     <p>4. 領域限制：不限科系、年級、國籍及專業領域</p>
-    <div style={{ marginTop: "30px", textAlign: "center" }}>
+    <div style={{ marginTop: "30px", textAlign: "center", display: "flex", justifyContent: "center", gap: "16px", flexWrap: "wrap" }}>
       <a href={RULES_PDF_URL} target="_blank" rel="noopener noreferrer">
-        <button className="btn primary">下載官方競賽簡章 (PDF)</button>
+        <button className="btn primary">查看競賽簡章</button>
+      </a>
+      <a href={PROPOSAL_HTML_URL} target="_blank" rel="noopener noreferrer">
+        <button className="btn primary">線上提案書規範（點擊開啟）</button>
       </a>
     </div>
   </div>
@@ -113,22 +115,6 @@ const Rules1Section = () => (
             }}
           >
             點擊我開啟文件
-          </a>
-          <a
-            href={PROPOSAL_DOCX_URL}
-            download="2026年NextWave競賽提案書.docx"
-            style={{
-              marginLeft: "12px",
-              fontSize: "1rem",
-              color: "#38bdf8",
-              textDecoration: "none",
-              border: "1px solid #38bdf8",
-              padding: "4px 10px",
-              borderRadius: "6px",
-              display: "inline-block",
-            }}
-          >
-            下載 Word 檔範本
           </a>
         </p>
       </div>
@@ -361,7 +347,7 @@ const PrizeSection = () => (
 
 const notifications = [
   { date: "2026/10/15", text: "NextWave：AI法創黑客松正式開放線上報名！" },
-  { date: "2026/10/15", text: "官方競賽簡章 PDF 已開放下載，請參賽隊伍詳閱規範。" },
+  { date: "2026/10/15", text: "官方競賽簡章與線上提案書規範已開放查閱，請參賽隊伍詳閱規範。" },
   { date: "2026/10/15", text: "初賽企劃書繳件截止時間為 11/30 (日) 23:59，逾期不予受理。" },
   { date: "2026/10/15", text: "若無指導老師，提案書之指導老師欄位可不填。" },
   { date: "2026/10/15", text: "決賽名單將於 12/2 (二) 公告並寄信通知入選團隊。" },
@@ -494,10 +480,11 @@ function App() {
               <button className="btn primary">查看簡章</button>
             </a>
             <a
-              href={RULES_PDF_URL}
-              download="NextWave_AI法創黑客松_簡章.pdf"
+              href={PROPOSAL_HTML_URL}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <button className="btn primary">下載簡章 (PDF)</button>
+              <button className="btn primary">線上提案書規範（點擊開啟）</button>
             </a>
           </div>
         </section>
@@ -597,11 +584,11 @@ function App() {
             <button className="btn highlight">前往報名表單</button>
           </a>
           <a
-            href={RULES_PDF_URL}
+            href={PROPOSAL_HTML_URL}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <button className="btn primary">下載官方競賽簡章 (PDF)</button>
+            <button className="btn primary">線上提案書規範（點擊開啟）</button>
           </a>
         </div>
       </section>
