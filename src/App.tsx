@@ -290,7 +290,7 @@ const PrizeSection = () => (
         <tr>
           <td>最佳簡報獎</td>
           <td>NT$ 2,000</td>
-          <td>3 組</td>
+          <td>1 組</td>
           <td>獎狀每人乙紙</td>
         </tr>
         <tr>
@@ -302,7 +302,7 @@ const PrizeSection = () => (
       </tbody>
     </table>
     <div className="total-prize">
-      🎉 總獎金：<span>NT$ 50,000</span>
+      🎉 總獎金：<span>NT$ 46,000</span>
     </div>
   </div>
 );
